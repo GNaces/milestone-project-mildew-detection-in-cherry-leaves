@@ -9,7 +9,7 @@ from app_pages.page_mildew_detector import page_mildew_detector_body
 from app_pages.page_ml_performance import page_ml_performance_metrics
 
 
-app = MultiPage(app_name="Mildew Detection in Cherry Leaves :cherries:")
+app = MultiPage(app_name="Mildew Detection in Cherry Leaves")
 
 # Add app pages using .add_page()
 app.add_page("Project Summary", page_summary_body)

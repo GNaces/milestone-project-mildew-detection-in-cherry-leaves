@@ -47,7 +47,7 @@ def page_ml_performance_metrics():
         f"The model learning curve is used to check the model for "
         f"overfitting and underfitting by plotting loss and accuracy."
     )
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     with col1:
         model_acc = plt.imread(f"outputs/{version}/model_training_acc.png")
         st.image(model_acc, caption='Model Training Accuracy')

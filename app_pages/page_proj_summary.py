@@ -5,52 +5,49 @@ import matplotlib.pyplot as plt
 def page_summary_body():
     # https://en.wikipedia.org/wiki/Powdery_mildew
 
-    logo = plt.imread('docs/company_logo.png')
-    st.image(logo)
-
     st.write("## Project Summary")
 
     st.info(
         f"**General Information**\n\n"
-        f"Our client **Farmy & Foods** is facing a challenge where their"
-        f" cherry plantations present powdery mildew. Powdery mildew "
-        f"is a fungal disease that affects a wide range of plants."
-        f" Powdery mildew diseases are caused by many different species "
-        f"of ascomycete fungi in the order Erysiphales. It is one of the"
-        f" easier plant diseases to identify, as the signs of"
-        f" the causal pathogen are quite distinctive. "
-        f"Infected plants display white powdery spots on the leaves and stems."
-        f" When severe, the disease may reduce plant growth and flowering.\n\n"
-        f"Currently, the detection process for the client is manual"
-        f" verification if a given cherry tree contains powdery mildew"
-        f" which takes a minute per tree. The company has thousands of"
-        f" cherry trees located on multiple farms across the country. "
-        f"To save time in this process, the IT team suggested an ML "
-        f"system that detects instantly, using a leaf tree image, "
-        f"if it is healthy or has powdery mildew.\n\n")
+        f"Our client **Cherry-Py** is dealing with powdery mildew on their"
+        f" cherry orchards. A fungus called powdery mildew damages a variety"
+        f" of plants. Numerous species of ascomycete fungi belonging to the"
+        f" Erysiphales order are responsible for powdery mildew infections."
+        f" Because the symptoms of the causing pathogen are so different,"
+        f" it is one of the simpler plant diseases to recognize. The leaves"
+        f" and stems of infected plants have white, powdery patches. When" 
+        f" the disease is severe, it can hinder plant growth and flowering.\n\n"
+        f"Cherry-Py's current method of detecting whether a particular"
+        f" cherry tree has powdery mildew is manual verification, which"
+        f" takes a minute per tree. On several farms around the nation,"
+        f" the corporation owns thousands of cherry trees. The IT team "
+        f" proposed an ML system that uses an image of a leaf tree to"
+        f" instantaneously determine if it is healthy or has powdery mildew"
+        f" in order to save time in this procedure.\n\n"
+    )
 
     st.write(
         f"**Project Dataset**\n\n"
-        f"> The dataset is a collection of cherry leaf images provided "
-        f"by Farmy & Foods, taken from their crops. The available image dataset "
-        f"contains 4208 images of healthy and powdery mildew-infected leaves,"
-        f" and it is split evenly for healthy cherry"
-        f" leaves and mildew-infected leaves."
+        f" The dataset consists of a set of photos of cherry leaves that"
+        f" were collected from Cherry-Py's farms. The 4208 photos of"
+        f" powdery mildew-infected and healthy leaves in the provided"
+        f" picture dataset are evenly distributed between mildew-infected"
+        f" and healthy cherry leaves."
     )
 
     st.caption(
-        f"* Dataset source: [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves)"
+        f"* Dataset source: [kaggle.com](https://www.kaggle.com/codeinstitute/cherry-leaves)"
     )
 
     st.success(
         f"**The project has 2 business requirements:**\n"
-        f"* 1. The client is interested in conducting a study "
-        f"to visually differentiate a cherry leaf that is healthy "
-        f"from one that contains powdery mildew. \n"
-        f"* 2. The client is interested in telling whether a given cherry"
-        f" leaf is infected by powdery mildew or not."
-        )
+        f"* 1. Cherry-Py wants to carry out a research to"
+        f" visually distinguish between a cherry leaf that"
+        f" has powdery mildew and one that is healthy.\n"
+        f"* 2. Cherry-Py wants to know if the cherry leaf"
+        f" in the picture is healthy or if it has powdery mildew.\n"
+    )
 
     st.warning(
         f"* For additional information, please visit and **read** the "
-        f"[Project README file](https://github.com/SerraKD/mildew-detection)")
+        f"[Project README file](https://)")

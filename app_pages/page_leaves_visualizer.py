@@ -14,8 +14,9 @@ def page_leaves_visualizer_body():
 
     st.info(
         f"**Business Requirement 1**\n"
-        f"* The client is interested in conducting a study that visually "
-        f"differentiates a **powdery mildew** infected leaf from a **healthy** leaf."
+        f"* 1. Cherry-Py wants to carry out a research to"
+        f" visually distinguish between a cherry leaf that"
+        f" has **powdery mildew** and one that is **healthy**.\n"
     )
     version = 'v1'
     if st.checkbox("Difference between average and variability image"):
@@ -23,15 +24,15 @@ def page_leaves_visualizer_body():
         avg_var_healty = plt.imread(f"outputs/{version}/avg_var_healthy.png")
         avg_var_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
         st.success(
-            f" We notice that the signs of the causal pathogen are fairly distinctive. \n\n"
-            f"Infected leaves display white powdery spots, which we can "
-            f" intuitively differentiate from healthy leaves. \n\n"
-            f"* Average, Variability, and Difference Images confirmed the hypothesis by "
-            f"showing color differences within the center of each leaf image. \n\n"
-            f"* Yet, there are no clear patterns to identify them by shape considering "
-            f" the fact that when the infection is spread, leaves may become distorted, curling upward."
+            f" It is evident that the symptoms of the causing infection are quite different. \n\n"
+            f"We can tell the difference between healthy and infected leaves  "
+            f" by their white, powdery patches. \n\n"
+            f"* Difference, Variability, and Average Images that displayed color variations "
+            f"within each leaf image's center supported the theory. \n\n"
+            f"* As the illness spreads, leaves may become deformed and curl upward, "
+            f" but there are no obvious patterns to distinguish them by shape."
         )
-        st.image(avg_var_healty, caption='Healty leaf - Avegare and Variability')
+        st.image(avg_var_healty, caption='Healty leaf - Average and Variability')
         st.image(avg_var_powdery_mildew,
                  caption='Powdery Mildew infected leaf - Average and Variability')
         st.write("---")
@@ -40,24 +41,24 @@ def page_leaves_visualizer_body():
     if st.checkbox("Differences between average healthy and average powdery mildew infected leaves"):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
         st.success(
-            f" We notice that this study shows similar patterns as color differences in "
-            f"the center of the leaf image, where we can intuitively differentiate one from another. \n\n "
-            f"* Healthy leaf has more **green color saturation**, whereas powdery "
-            f"mildew-infected leaf has a **muted green color** with white spots. \n\n"
+            f" Similar patterns to color differences in the leaf image's center are observed in "
+            f"this study, which allows us to distinguish between them intuitively. \n\n "
+            f"* The **green color saturation** of a healthy leaf is higher than that of a leaf infected "
+            f"with powdery mildew, which has white patches and a weaker green hue. \n\n"
         )
         st.warning(
-            f"There are no clear patterns to identify them by shape.")
+            f"No distinct patterns exist to distinguish them by shape.")
 
         st.image(diff_between_avgs, caption='Difference between average images')
 
     # Show the image montage
     if st.checkbox("Image Montage"):
         st.info(
-            "* To create and refresh the montage, **click** on 'Create Montage' button")
+            "* Click the 'Create Montage' button to create and refresh the montage.")
         st.success(
-            f"* The image montage helps to visualize the differences between healthy and "
-            f"powdery mildew infected leaf. \n\n"
-            f"* The infected leaf has white, powdery spots or patches across the surface."
+            f"* The montage of images makes it easier to see how a leaf infected with powdery "
+            f"mildew differs from one that is healthy. \n\n"
+            f"* The surface of the infected leaf is covered in white, powdery patches or dots."
         )
         my_data_dir = 'inputs/cherry_leaves/cherry-leaves'
         labels = os.listdir(my_data_dir + '/validation')
