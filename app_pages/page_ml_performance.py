@@ -11,7 +11,7 @@ def page_ml_performance_metrics():
     """
     st.header("ML Performance Metrics")
 
-    version = 'v1'
+    version = 'v2'
     
     st.write("### Average Image size in dataset")
 
