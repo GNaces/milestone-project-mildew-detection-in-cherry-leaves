@@ -1,13 +1,5 @@
 *.zip
-inputs/cherry_leaves/cherry-leaves/train/*
-inputs/cherry_leaves/cherry-leaves/test/*
-inputs/cherry_leaves/cherry-leaves/validation/*
-.gitignore
-.git
-test/
-README.md
-*.md
-.env
-node_modules/
-.vscode/
-*.log
+/inputs/cherry_leaves/cherry-leaves/train/*
+/inputs/cherry_leaves/cherry-leaves/test/*
+/inputs/cherry_leaves/cherry-leaves/validation/*
+/outputs/v1/*
