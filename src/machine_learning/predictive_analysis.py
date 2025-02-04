@@ -5,6 +5,7 @@ import plotly.express as px
 from tensorflow.keras.models import load_model
 from PIL import Image
 from src.data_management import load_pkl_file
+import time
 
 
 def plot_predictions_probabilities(pred_proba, pred_class):
@@ -31,7 +32,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
     ## plot image on streamlit dashboard
-    st.plotly_chart(fig, key=f"plot_{hash(fig)}")
+    st.plotly_chart(fig, key=f"plot_{int(time.time())}")
 
 
 def resize_input_image(img, version):
