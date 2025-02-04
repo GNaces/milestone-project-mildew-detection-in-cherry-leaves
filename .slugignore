@@ -1,3 +1,10 @@
 *.ipynb
 .gitignore
 README.md
+/outputs/v2/avg_diff.png
+/outputs/v2/avg_img_size.png
+/outputs/v2/avg_var_healthy.png
+/outputs/v2/avg_var_powdery_mildew.png
+/outputs/v2/labels_distribution.png
+/outputs/v2/model_training_acc.png
+/outputs/v2/model_training_losses.png
