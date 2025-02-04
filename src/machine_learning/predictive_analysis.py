@@ -31,7 +31,7 @@ def plot_predictions_probabilities(pred_proba, pred_class):
         range_y=[0, 1],
         width=600, height=300, template='seaborn')
     ## plot image on streamlit dashboard
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, key=f"plot_{hash(fig)}")
 
 
 def resize_input_image(img, version):
