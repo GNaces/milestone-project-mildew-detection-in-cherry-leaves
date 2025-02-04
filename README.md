@@ -21,4 +21,111 @@ The IT team proposed an ML system that uses an image of a leaf tree to instantan
 - 1. The client wants to carry out a research to visually distinguish between a cherry leaf that has powdery mildew and one that is healthy.
 - 2. The clients wants to know if the cherry leaf in the picture is healthy or if it has powdery mildew.
 
+## Hypotheses and how to validate?
 
+### ***Hypotheses***
+
+- Healthy and powdery mildew-affected cherry leaves can be distinguished from one another using the obvious pattern differences between the two types of photos.
+
+- Cherry leaves affected with powdery mildew differ from healthy leaves in subtle color and form.
+
+- The given image dataset can be used to build a machine learning model that can determine with at least 97% accuracy if a leaf has powdery mildew.
+
+### ***Validation***
+
+- The image montage illustrates the apparent distinction between leaves that are healthy and those that have powdery mildew.
+
+![Image montage healthy leaves](/files/readme/healthy.png)
+![Image montage mildew leaves](/files/readme/powdery-mildew.png)
+
+- Average, Difference, and Variability Color variations within the center of each leaf image supported the notion, but there aren't any obvious patterns that would allow one to distinguish them by shape.
+
+![Average Healthy](/outputs/v2/avg_var_healthy.png)
+![Average Infected](/outputs/v2/avg_var_powdery_mildew.png)
+![Difference](/outputs/v2/avg_diff.png)
+
+- A performance evaluation of the ML pipeline reveals that it can distinguish between a healthy and diseased leaf with 99% accuracy.
+
+![Performance Metrics](/files/readme/ave-diff.png)
+
+## The rationale to map the business requirements to the Data Visualisations and ML tasks
+
+### ***Business Requirement 1:***
+
+The client wants to carry out a research to visually distinguish between a cherry leaf that has powdery mildew and one that is healthy.
+
+> **Data Visualization**
+
+- The dashboard will show mean and standard deviation photos of healthy and powdery mildew-infected cherry leaves.
+
+- The difference between an average healthy leaf and an average powdery mildew-infected leaf will be demonstrated.
+
+- An picture montage of healthy and powdery mildew-infected leaves will be shown.
+
+### ***Business Requirement 2:***
+
+The clients wants to know if the cherry leaf in the picture is healthy or if it has powdery mildew.
+
+> **Classification**
+
+- Build a binary classifier ML model to determine if a leaf is healthy or diseased with powdery mildew. 
+
+- Evaluate the Ml model's loss and accuracy.
+
+- Add an option for users to generate and download a prediction report for uploadable photos.
+
+## Cross Industry Standard Process for Data Mining (CRISP-DM)
+
+CRISP-DM was used while developing this project.
+
+![Crisp- DM image](/files/readme/crisp-dm.png)
+
+> Business Requirement 1
+
+Study should include analysis on:
+
+- average images and variability images for each class (healthy or powdery mildew),
+- the differences between average healthy and average powdery mildew cherry leaves,
+- an image montage for each class
+
+> Business Requirement 2:
+
+- deliver an ML system that is capable of predicting whether a cherry leaf is healthy or contains powdery mildew
+
+***2. Data Understanding***
+
+The [Kaggle dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves) is provided by Code Institute over 4k images of healthy and affected cherry leaves.
+
+- Data collection.
+
+- Retrieve data from the Kaggle dataset  and save as raw data.
+
+***3. Data Preparation***
+
+- Clean data, check and remove non image files
+- Split data into train validation and test set
+- Set Image shape
+- Average and variability of images per label
+- Load image shapes and labels in an array
+- Plot and save mean variability of images per label
+- Difference between average healthy and powdery mildew contained leaf
+- Image montage
+- Image data augmentation
+
+***4. Modelling***
+
+- Create CNN model
+- Fit created ML model with train set
+- Save model
+
+***5. Evaluation***
+
+- Plot model learning curve for model training loss and accuracy
+- Evaluate model on test set
+- Load random image to predict
+- Convert image to array and prepare for prediction.
+- Predict class probabilities and evaluate.
+
+***6. Deployment***
+
+- Deploy the models into production environment.
