@@ -2,5 +2,5 @@
 /inputs/cherry_leaves/cherry-leaves/train/*
 /inputs/cherry_leaves/cherry-leaves/test/*
 /inputs/cherry_leaves/cherry-leaves/validation/*
-/outputs/v1/*
-/outputs/v2/*
+/outputs/v1/mildew_detection_model.h5
+/outputs/v2/mildew_detection_model.h5
