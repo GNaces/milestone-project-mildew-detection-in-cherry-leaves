@@ -2,3 +2,6 @@
 .gitignore
 README.md
 /outputs/v1/*
+/inputs/cherry_leaves/cherry-leaves/test/*
+/inputs/cherry_leaves/cherry-leaves/train/*
+/inputs/cherry_leaves/cherry-leaves/validation/*
