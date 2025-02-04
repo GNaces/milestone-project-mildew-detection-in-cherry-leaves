@@ -15,7 +15,7 @@ def page_mildew_detector_body():
     st.header("Powdery Mildew Detection")
     st.success(
         f"**Business Requirement 2**\n"
-        f"* Cherry-Py wants to know if the cherry leaf in the picture is **healthy** or if it has"
+        f"* Farmy and Foods wants to know if the cherry leaf in the picture is **healthy** or if it has"
         f" **powdery mildew**.")
 
     st.write('---')

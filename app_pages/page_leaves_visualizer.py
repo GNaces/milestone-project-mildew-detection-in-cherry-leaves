@@ -14,7 +14,7 @@ def page_leaves_visualizer_body():
 
     st.info(
         f"**Business Requirement 1**\n"
-        f"* 1. Cherry-Py wants to carry out a research to"
+        f"* 1. Farmy and Foods wants to carry out a research to"
         f" visually distinguish between a cherry leaf that"
         f" has **powdery mildew** and one that is **healthy**.\n"
     )

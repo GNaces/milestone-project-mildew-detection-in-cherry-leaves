@@ -59,7 +59,7 @@ def page_project_hypothesis_body():
     st.write('---')
     
     st.write(
-        f"* 1. Cherry-Py wants to carry out a research to visually "
+        f"* 1. Farmy and Foods wants to carry out a research to visually "
         f"distinguish between a cherry leaf that has powdery mildew "
         f"and one that is healthy. \n"
         f"* 2. Chery-Py wants to know if the cherry leaf in the "
@@ -67,7 +67,7 @@ def page_project_hypothesis_body():
     )
     
     st.write (
-        f"> **Cherry-Py bussines requirements are fullfilled.**"
+        f"> **Farmy and Foods bussines requirements are fullfilled.**"
     )
 
     st.write('---')
