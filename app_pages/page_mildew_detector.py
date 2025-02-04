@@ -9,7 +9,6 @@ from src.machine_learning.predictive_analysis import (
     plot_predictions_probabilities
 )
 
-
 def page_mildew_detector_body():
     # mildew detector page
 
@@ -39,15 +38,19 @@ def page_mildew_detector_body():
     if predict_button:
         make_live_predict(images_buffer)
 
-
 def make_live_predict(images_buffer):
     # upload images and make live predictions
 
     if images_buffer is not None:
+        # DataFrame to hold results
         df_report = pd.DataFrame([])
-        for image in images_buffer:
-
-            img_pil = (Image.open(image))
+        
+        # Display a progress bar for multiple predictions
+        progress_bar = st.progress(0)
+        total_images = len(images_buffer)
+        
+        for idx, image in enumerate(images_buffer):
+            img_pil = Image.open(image)
             st.info(f"Leaf Sample: **{image.name}**")
             img_array = np.array(img_pil)
             st.image(
@@ -55,14 +58,21 @@ def make_live_predict(images_buffer):
 
             version = 'v2'
             resized_img = resize_input_image(img=img_pil, version=version)
-            pred_proba, pred_class = load_model_and_predict(
-                resized_img, version=version)
+            pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
+
+            # Plot prediction results
             plot_predictions_probabilities(pred_proba, pred_class)
 
+            # Add result to DataFrame
             df_report = pd.concat([df_report, pd.DataFrame([{"Name": image.name, "Result": pred_class}])], ignore_index=True)
 
+            # Update progress bar
+            progress_bar.progress((idx + 1) / total_images)
+
+        # Once all predictions are done
         if not df_report.empty:
             st.success("Analysis Report")
             st.table(df_report)
-            st.markdown(download_dataframe_as_csv(
-                df_report), unsafe_allow_html=True)
+
+            # Make results downloadable as CSV
+            st.markdown(download_dataframe_as_csv(df_report), unsafe_allow_html=True)
