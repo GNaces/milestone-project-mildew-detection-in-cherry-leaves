@@ -9,6 +9,7 @@ node_modules/
 cloudinary_python.txt
 kaggle.json
 *.zip
-inputs/cherry_leaves/cherry-leaves/train/*
-inputs/cherry_leaves/cherry-leaves/test/*
-inputs/cherry_leaves/cherry-leaves/validation/*
+/inputs/cherry_leaves/cherry-leaves/train/*
+/inputs/cherry_leaves/cherry-leaves/test/*
+/inputs/cherry_leaves/cherry-leaves/validation/*
+/outputs/v1/*
