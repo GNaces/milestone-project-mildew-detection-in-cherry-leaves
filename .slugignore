@@ -1,4 +1,0 @@
-*.ipynb
-.gitignore
-README.md
-/outputs/v1/*
