@@ -59,8 +59,7 @@ def make_live_predict(images_buffer):
                 resized_img, version=version)
             plot_predictions_probabilities(pred_proba, pred_class)
 
-            df_report = df_report.append({"Name": image.name, 'Result': pred_class},
-                                         ignore_index=True)
+            df_report = pd.concat([df_report, pd.DataFrame([{"Name": image.name, "Result": pred_class}])], ignore_index=True)
 
         if not df_report.empty:
             st.success("Analysis Report")
